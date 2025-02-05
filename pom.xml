@@ -97,6 +97,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>user-mockito</finalName>
 	</build>
-
 </project>
