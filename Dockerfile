@@ -10,9 +10,9 @@ RUN ./mvnw clean package
 
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
-COPY --from=build /app/target/*.jar user-mockito.jar
+COPY --from=build /app/target/*.jar user-mock.jar
 
 ENV JAVA_OPTS="-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
 
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","user-mockito.jar"]
+ENTRYPOINT ["java","-jar","user-mock.jar"]
